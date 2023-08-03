@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginExample</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="peso_kg">Peso (kg)</string>
+    <string name="altura_metros">Altura (metros)</string>
+    <string name="calcular_imc">Calcular IMC</string>
+</resources>
