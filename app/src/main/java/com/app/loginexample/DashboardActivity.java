@@ -55,10 +55,10 @@ public class DashboardActivity extends AppCompatActivity {
         double weightKg = Double.parseDouble(weightStr);
         double heightMeters = Double.parseDouble(heightStr);
 
-        // Calcular el IMC.
-        double bmi = weightKg / (heightMeters * heightMeters);
+        // Calcular el IMC utilizando la clase BMICalculator.
+        String result = BMICalculator.calculateBMI(weightKg, heightMeters);
 
         // Mostrar el resultado del IMC en el TextView del XML.
-        bmiResultTextView.setText(String.format("Tu IMC es: %.2f", bmi));
+        bmiResultTextView.setText(result);
     }
 }

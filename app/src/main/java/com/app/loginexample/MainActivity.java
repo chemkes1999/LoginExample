@@ -1,13 +1,13 @@
 package com.app.loginexample;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!username.isEmpty()) {
                     // Aquí puedes agregar lógica para verificar el inicio de sesión.
                     // Por ahora, simplemente lo redirigiremos a la pantalla de bienvenida.
-                    Toast.makeText(MainActivity.this, "Bienvenido "+username, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Bienvenido " + username, Toast.LENGTH_SHORT).show();
                     openDashboard(username);
                 } else {
                     Toast.makeText(MainActivity.this, "Ingrese un nombre de usuario", Toast.LENGTH_SHORT).show();
