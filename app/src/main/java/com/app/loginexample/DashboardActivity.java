@@ -5,6 +5,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,5 +65,9 @@ public class DashboardActivity extends AppCompatActivity {
 
         // Mostrar el resultado del IMC en el TextView del XML.
         bmiResultTextView.setText(result);
+
+        // Agregar la animación de desvanecimiento al mostrar el resultado.
+        Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        bmiResultTextView.startAnimation(fadeInAnimation);
     }
 }
