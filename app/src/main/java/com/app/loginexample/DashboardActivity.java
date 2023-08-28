@@ -1,13 +1,10 @@
 package com.app.loginexample;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +25,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         // Muestra el nombre de usuario en la pantalla de bienvenida.
         TextView welcomeTextView = findViewById(R.id.welcomeTextView);
-        welcomeTextView.setText("Bienvenido, " + username + "!");
+        welcomeTextView.setText(String.format("Bienvenido, %s!", username));
 
         // Inicializa los elementos de la interfaz.
         weightEditText = findViewById(R.id.weightEditText);
@@ -37,12 +34,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         // Configura el botón para calcular el IMC.
         Button calculateButton = findViewById(R.id.calculateButton);
-        calculateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculateBMI();
-            }
-        });
+        calculateButton.setOnClickListener(v -> calculateBMI());
     }
 
     private void calculateBMI() {

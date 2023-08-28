@@ -6,17 +6,27 @@ public class BMICalculator {
 
     public static String calculateBMI(double weightKg, double heightMeters) {
         double bmi = weightKg / (heightMeters * heightMeters);
+        String formattedBMI = formatBMI(bmi);
+
+        return generateResultMessage(formattedBMI);
+    }
+
+    private static String formatBMI(double bmiValue) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        double bmiValue = weightKg / (heightMeters * heightMeters);
-        String formattedBMI = decimalFormat.format(bmiValue);
+        return decimalFormat.format(bmiValue);
+    }
+
+    private static String generateResultMessage(String formattedBMI) {
+        double bmi = Double.parseDouble(formattedBMI);
+
         if (bmi < 18.5) {
             return "Tu índice es de " + formattedBMI + ". Tienes bajo peso.";
-        } else if (bmi >= 18.5 && bmi < 24.9) {
+        } else if (bmi < 24.9) {
             return "Tu índice es de " + formattedBMI + ". Tu peso es normal.";
-        } else if (bmi >= 25 && bmi < 29.9) {
+        } else if (bmi < 29.9) {
             return "Tu índice es de " + formattedBMI + ". Tienes sobrepeso.";
         } else {
-            return "Tu índice es de " + formattedBMI + " .Tienes obesidad.";
+            return "Tu índice es de " + formattedBMI + ". Tienes obesidad.";
         }
     }
 }
