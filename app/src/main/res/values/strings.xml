@@ -5,4 +5,7 @@
     <string name="peso_kg">Peso (kg)</string>
     <string name="altura_metros">Altura (metros)</string>
     <string name="calcular_imc">Calcular IMC</string>
+    <string name="welcome">Inicio de sesión</string>
+    <string name="button">Button</string>
+    <string name="result">result</string>
 </resources>
